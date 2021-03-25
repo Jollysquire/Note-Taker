@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <main>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Note Taker</title>
   </head>
   <body>
-    <header>Take Better Notes</header>
-    <button class="favorite styled" type="button">Add to favorites</button>
-    <section>
-      My Notes
+    <h1>Take Better Notes</h1>
+
+    <div class="top-buttons">
+      <button class="new styled" type="button">New Note</button>
+      <button class="dark styled" type="button">Dark Theme</button>
+    </div>
+
+    <textarea id="story" name="story" rows="5" cols="33">This is a placeholder</textarea>
+
+    <div class="bot-buttons">
+      <button class="save styled" type="button">Save</button>
+      <button class="cancel styled" type="button">Cancel</button>
+    </div>
+    </main>
+    
+    <section class="sidebar">
+      <h1>My Notes</h1>
       <ul>
         <li>note one</li>
         <li>note two</li>
       </ul>
     </section>
+
     <footer>Keep in touch</footer>
+    
+    <div class="images">
+        <a href=""><img src="images/linkedin_circle_color-512.webp" alt="Linkedin circle" height="45" width="45"></a>
+        <a href=""><img src="images/Internet_Line-02-512.webp" alt="Internet symbol" height="45" width="45"></a>
+    </div>
   </body>
 </html>
