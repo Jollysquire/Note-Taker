@@ -73,3 +73,28 @@ footer{
     justify-content: center;
 }
 
+@media screen and (min-width:600px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 3fr repeat(1fr);
+        grid-gap: 1em;
+    }
+    
+    .sidebar{
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    
+    main{
+        grid-column: 2/3;
+    }
+
+    footer{
+        grid-column: 2/3;
+    }
+
+    .images{
+        grid-column: 2/3;
+    }
+}
