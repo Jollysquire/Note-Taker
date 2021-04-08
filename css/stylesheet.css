@@ -4,6 +4,8 @@ body{
     background-color: #ebbcba;
     color: #26233a;
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 98vw;
 }
 
 main{
@@ -12,8 +14,7 @@ main{
 }
 
 h1{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .styled{
@@ -63,7 +64,8 @@ textarea {
 
 footer{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 15px;
     font-size: x-large;
 }
@@ -80,8 +82,8 @@ nav{
 @media screen and (min-width:600px){
     body{
         display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 3fr repeat(1fr);
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 3fr 1fr;
         grid-gap: 1em;
     }
     
