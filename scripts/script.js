@@ -9,6 +9,21 @@
 //   may have to restructure index or find new solution
 
 //Save button
+let notesArray = []
+const save = document.getElementById('save')
+
+function saveNote() {
+    let name = prompt('Enter a name for your note')
+    let list = document.querySelector('ul')
+    let textSelect = document.getElementById('story')
+    let text = textSelect.innerHTML
+    let newitem = document.createElement("li");
+    let noteName = document.createTextNode(name);
+    newitem.appendChild(noteName);
+    list.appendChild(newitem);
+    notesArray.push({title: name, body: text});
+}
+
 // - Prompts users for input, which is used as key in the array.
 // - Takes current text in text area and makes it value, this should be easy
 //   using innerHTML and assigning the text to a variable.
@@ -19,3 +34,5 @@
 // - Should be similar to saving with the way I check elements, but instead use
 // inner to update the textarea not save it.
 // - Not entirely sure how to use notes title as button if they are being updated.
+
+save.addEventListener("click", saveNote);
