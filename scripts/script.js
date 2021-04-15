@@ -51,10 +51,10 @@ let notesArray = []
 const save = document.getElementById('save')
 
 function saveNote() {
-    let name = prompt('Enter a name for your note')
-    let list = document.querySelector('ul')
-    let textSelect = document.getElementById('story')
-    let text = textSelect.innerHTML
+    let name = prompt('Enter a name for your note');
+    let list = document.querySelector('ul');
+    let textSelect = document.getElementById('story');
+    let text = textSelect.value;
     let newitem = document.createElement("li");
     let noteName = document.createTextNode(name);
     newitem.appendChild(noteName);
@@ -64,9 +64,14 @@ function saveNote() {
 
 //Load notes
 const load = document.querySelector('ul')
-
+    
 function loadNote() {
-
+    // let iknowimbadsorry = prompt('Enter name of note you want')
+    let targetNote = (event.target.innerHTML);
+    for(note of notesArray) {
+        if(note.title === targetNote)
+        document.querySelector('#story').value = note.body
+    }
 }
 // - Should be similar to saving with the way I check elements, but instead use
 // inner to update the textarea not save it.
