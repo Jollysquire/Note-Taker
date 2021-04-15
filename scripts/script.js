@@ -29,7 +29,7 @@ function toggleVis() {
     for (let i = 0; i < mode.length; i++) {
     mode[i].classList.add('togVisibility')
     }
-    document.querySelector('#story').innerHTML = 'This is a placeholder'
+    document.querySelector('#story').value = 'This is a placeholder'
     vischeck.push(0)
 }
 
@@ -42,7 +42,7 @@ function newNote() {
         }
     }
     else if (vischeck.length === 0) {
-        document.querySelector('#story').innerHTML = 'I have cleared your work space but you may want to hold backspace for a minute because I put this message in the way to confirm that I have in fact just cleared the text that you had put in this box before. This may be slightly annoying to clear each time you make a new note, but how else would you know that I have just cleared what you had before and it was not just some wild coincidental error that had occurred. This is the conclusion of the confirmation message. I hope you have a wonderful day and continue using Take Better Notes to improve your daily note taking and life in general. And now this is the real conclusion to the message, happy typing.';
+        document.querySelector('#story').value = 'I have cleared your work space but you may want to hold backspace for a minute because I put this message in the way to confirm that I have in fact just cleared the text that you had put in this box before. This may be slightly annoying to clear each time you make a new note, but how else would you know that I have just cleared what you had before and it was not just some wild coincidental error that had occurred. This is the conclusion of the confirmation message. I hope you have a wonderful day and continue using Take Better Notes to improve your daily note taking and life in general. And now this is the real conclusion to the message, happy typing.';
     }
 }
 
