@@ -23,23 +23,21 @@
   <main>
 
     <div class="top-buttons">
-      <button class="new styled" type="button">New Note</button>
-      <button class="dark styled" type="button">Dark Theme</button>
+      <button class="new styled modeSelector" type="button">New Note</button>
+      <button class="dark styled modeSelector" id ="mode" type="button">Dark Theme</button>
     </div>
 
-    <textarea id="story" name="story" rows="10" cols="5">This is a placeholder</textarea>
+    <textarea id="story" class="modeSelector" name="story" rows="10" cols="5">This is a placeholder</textarea>
 
     <div class="bot-buttons">
-      <button class="save styled" id="save" type="button">Save</button>
-      <button class="cancel styled" type="button">Cancel</button>
+      <button class="save styled modeSelector" id="save" type="button">Save</button>
+      <button class="cancel styled modeSelector" type="button">Cancel</button>
     </div>
   </main>
 
-  <section class="sidebar">
+  <section class="sidebar modeSelector">
     <h1>My Notes</h1>
     <ul>
-      <li>note one</li>
-      <li>note two</li>
     </ul>
   </section>
 

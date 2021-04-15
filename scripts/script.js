@@ -1,4 +1,23 @@
 // Dark/Light mode
+const mode = document.getElementById('mode')
+
+function changeMode () {
+    var check = document.querySelector('.dark').innerHTML;
+    if (check === 'Dark Theme') {
+        var mode = document.querySelectorAll(".modeSelector");
+        for (let i = 0; i < mode.length; i++) {
+        mode[i].classList.add('darkmode')
+        }
+    document.querySelector('.dark').innerHTML = "Light Theme";
+    }
+    if (check === 'Light Theme') {
+        var mode = document.querySelectorAll(".modeSelector");
+        for (let i = 0; i < mode.length; i++) {
+        mode[i].classList.remove('darkmode')
+        }
+    document.querySelector('.dark').innerHTML = "Dark Theme";
+    }
+}
 // - When button is pressed toggle off original all colors (or class might be easier)
 // - add new colors above oringinal to make them the default, uses cascading, 
 //  This is done in the css not js
@@ -24,15 +43,20 @@ function saveNote() {
     notesArray.push({title: name, body: text});
 }
 
-// - Prompts users for input, which is used as key in the array.
-// - Takes current text in text area and makes it value, this should be easy
-//   using innerHTML and assigning the text to a variable.
-// - Add key to notes list again using innerHTML imagine to update entire list 
-//   with a for loop and adding each key every time, unless I can append.
-
 //Load notes
+const load = document.querySelector('ul')
+
+function loadNote() {
+    // let name = 'Milkers'
+    // for (let note of notesArray){
+    document.querySelector('#story').innerHTML = 'x';
+        
+    // }
+}
 // - Should be similar to saving with the way I check elements, but instead use
 // inner to update the textarea not save it.
 // - Not entirely sure how to use notes title as button if they are being updated.
 
+mode.addEventListener("click", changeMode);
 save.addEventListener("click", saveNote);
+load.addEventListener("click", loadNote);
